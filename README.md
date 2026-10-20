@@ -48,6 +48,6 @@ bash scripts/window-snap.sh uninstall
 
 `configure` 写入配置后立即重载，无需重启；手动编辑配置后执行 `reload`。
 
-支持提供标准 macOS 辅助功能窗口接口的应用，特殊窗口可能不适用。升级后可能需要重新授权。系统中的应用名称为 **Mac Window Snap**。旧版本升级请参照[迁移说明](mac-window-snap/references/troubleshooting.md#旧名称迁移)。
+支持提供标准 macOS 辅助功能窗口接口的应用，特殊窗口可能不适用。升级后可能需要重新授权。系统中的应用名称为 **Mac Window Snap**。
 
-[故障排查](mac-window-snap/references/troubleshooting.md) · [MIT License](LICENSE)
+[MIT License](LICENSE)

@@ -38,7 +38,7 @@ bash scripts/window-snap.sh uninstall
 
 安装或配置请求授权完成相应本机步骤，不反复询问。先说明一个后台项目与辅助功能权限，再执行 dry-run 和安装。脚本保留现有设置并备份升级前的程序；相同版本复用二进制。无安装凭据或路径冲突时停止并报告，不能覆盖未托管文件。
 
-系统应用名为 **Mac Window Snap**，支持目录为 `~/Library/Application Support/MacWindowSnap/`。旧版三款终端别名仅用于读取旧配置，新配置一律使用 Bundle ID。检测到旧名称安装时，先按[旧名称迁移](references/troubleshooting.md#旧名称迁移)保留配置并停用旧启动项，再安装新版，避免两个助手同时运行。
+系统应用名为 **Mac Window Snap**，支持目录为 `~/Library/Application Support/MacWindowSnap/`，启动项为 `local.mac-window-snap`。配置中的应用一律使用 Bundle ID。
 
 安装后检查 `status`：退出码 0 表示就绪或空闲，2 表示缺少辅助功能权限，3 表示配置、进程或监听异常。核对实际 `pid`、`observerActive` 和 `error`；应用未运行时 pid 为 0。权限缺失时执行 `permissions`，由用户添加已安装应用；授权后 reload，必要时只重启助手以刷新权限，再检查状态。不通过反复编译、重装解决授权。
 
@@ -46,4 +46,4 @@ bash scripts/window-snap.sh uninstall
 
 `stop` 停止当前 macOS 用户会话中的助手，`install` 可恢复。`uninstall` 将明确属于本安装的应用、启动项和支持目录移入回收站，报告原路径、回收站路径和恢复方式。回收站不可用时停止，不永久删除。
 
-出现安装、授权或兼容问题时读取[故障排查](references/troubleshooting.md)。交付时说明管理对象、比例、运行与权限状态、已验证行为和未验证部分。不要发布偏好备份、日志、安装凭据或构建产物。
+交付时说明管理对象、比例、运行与权限状态、已验证行为和未验证部分。不要发布偏好备份、日志、安装凭据或构建产物。

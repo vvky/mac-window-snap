@@ -116,7 +116,7 @@ install() {
     # Old startup files must be archived before installing under the new identity.
     if [ -e "$user_home/Library/LaunchAgents/local.terminal.windowhelper.plist" ] ||
        [ -e "$user_home/Applications/Terminal Window Helper.app" ]; then
-        die 'Legacy Terminal Window Helper installation found. Follow references/troubleshooting.md (旧名称迁移) before installing Mac Window Snap.'
+        die 'Conflicting window helper installation found. Installation stopped to prevent multiple helpers from running. Check the installed application and LaunchAgent before retrying.'
     fi
     for path in "$app" "$support" "$agent"; do [ ! -L "$path" ] || die "Refusing symbolic link: $path"; done
     if [ -e "$app" ] || [ -e "$agent" ] || [ -e "$support" ]; then check_owned; fi
