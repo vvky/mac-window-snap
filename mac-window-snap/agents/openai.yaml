@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mac 窗口居中吸附"
+  short_description: "按应用配置多屏自适应，跨屏拖拽松手后自动居中"
+  default_prompt: "使用 $mac-window-snap 为我指定的 Mac 应用配置多屏自适应窗口居中吸附。"
